@@ -55,7 +55,10 @@ Join our community of developers creating universal apps.
 foodapp
 ├─ app
 │  ├─ (auth)
+│  │  ├─ forgot-password.tsx
 │  │  ├─ login.tsx
+│  │  ├─ new-password.tsx
+│  │  ├─ reset-code.tsx
 │  │  ├─ signup.tsx
 │  │  ├─ welcome.tsx
 │  │  └─ _layout.tsx
@@ -86,6 +89,8 @@ foodapp
 │  ├─ onboarding.tsx
 │  ├─ refer-earn.tsx
 │  ├─ search-results.tsx
+│  ├─ services
+│  │  └─ auth.service.ts
 │  ├─ settings.tsx
 │  ├─ shipping-policy.tsx
 │  ├─ splash.tsx
