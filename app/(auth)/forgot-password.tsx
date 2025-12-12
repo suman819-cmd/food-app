@@ -154,7 +154,7 @@ export default function ForgotPasswordScreen() {
           />
           
           <Text style={styles.description}>
-            Enter your email address and we'll send you a verification code to reset your password.
+            Enter your email address and we&apos;ll send you a verification code to reset your password.
           </Text>
 
           {/* Email Field */}

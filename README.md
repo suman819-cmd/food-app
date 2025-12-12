@@ -60,6 +60,8 @@ foodapp
 │  │  ├─ new-password.tsx
 │  │  ├─ reset-code.tsx
 │  │  ├─ signup.tsx
+│  │  ├─ verify-code.tsx
+│  │  ├─ VerifyOTPScreen.tsx
 │  │  ├─ welcome.tsx
 │  │  └─ _layout.tsx
 │  ├─ (tabs)
@@ -94,6 +96,8 @@ foodapp
 │  ├─ settings.tsx
 │  ├─ shipping-policy.tsx
 │  ├─ splash.tsx
+│  ├─ stores
+│  │  └─ authStore.ts
 │  ├─ terms-conditions.tsx
 │  ├─ tracking
 │  │  └─ [orderId].tsx
