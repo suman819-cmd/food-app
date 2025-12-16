@@ -1,13 +1,13 @@
-export type OrderStatus = 
-  | 'pending' 
-  | 'confirmed' 
-  | 'preparing' 
-  | 'ready' 
-  | 'picked_up' 
-  | 'on_the_way' 
-  | 'arrived' 
-  | 'delivered' 
-  | 'cancelled';
+export type OrderStatus =
+  | "pending"
+  | "confirmed"
+  | "preparing"
+  | "ready"
+  | "picked_up"
+  | "on_the_way"
+  | "arrived"
+  | "delivered"
+  | "cancelled";
 
 export interface DeliveryPerson {
   id: string;
@@ -42,15 +42,15 @@ export interface OrderTracking {
 // Helper function to get status description
 export const getStatusDescription = (status: OrderStatus): string => {
   const descriptions: Record<OrderStatus, string> = {
-    'pending': 'Order has been placed',
-    'confirmed': 'Order confirmed by restaurant',
-    'preparing': 'Restaurant is preparing your food',
-    'ready': 'Food is ready for pickup',
-    'picked_up': 'Delivery partner picked up your order',
-    'on_the_way': 'Your food is on the way to you',
-    'arrived': 'Delivery partner has arrived at your location',
-    'delivered': 'Order has been delivered successfully',
-    'cancelled': 'Order has been cancelled',
+    pending: "Order has been placed",
+    confirmed: "Order confirmed by restaurant",
+    preparing: "Restaurant is preparing your food",
+    ready: "Food is ready for pickup",
+    picked_up: "Delivery partner picked up your order",
+    on_the_way: "Your food is on the way to you",
+    arrived: "Delivery partner has arrived at your location",
+    delivered: "Order has been delivered successfully",
+    cancelled: "Order has been cancelled",
   };
   return descriptions[status];
 };

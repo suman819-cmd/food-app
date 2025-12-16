@@ -61,7 +61,6 @@ foodapp
 │  │  ├─ reset-code.tsx
 │  │  ├─ signup.tsx
 │  │  ├─ verify-code.tsx
-│  │  ├─ VerifyOTPScreen.tsx
 │  │  ├─ welcome.tsx
 │  │  └─ _layout.tsx
 │  ├─ (tabs)
@@ -101,6 +100,8 @@ foodapp
 │  ├─ terms-conditions.tsx
 │  ├─ tracking
 │  │  └─ [orderId].tsx
+│  ├─ utils
+│  │  └─ network.ts
 │  ├─ wallet.tsx
 │  └─ _layout.tsx
 ├─ app.json
