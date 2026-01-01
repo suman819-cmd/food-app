@@ -11,7 +11,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 
 interface User {
   id: string;
-  fullName: string;
+  username: string;
   email: string;
   role: string;
 }
@@ -31,7 +31,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Load user on app start
   useEffect(() => {
     const init = async () => {
       try {
@@ -50,14 +49,19 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const signup = async (data: SignupPayload) => {
     await signupRequest(data);
-    router.push("/(auth)/verify-code"); // OTP screen
+
+    // Pass email to verify-code screen
+    router.push({
+      pathname: "/(auth)/verify-code",
+      params: { email: data.email },
+    });
   };
 
   const login = async (email: string, password: string) => {
     const data = await loginRequest(email, password);
     await AsyncStorage.setItem("token", data.token);
     setUser(data.user);
-    router.replace("/(tabs)/(home)"); // home
+    router.replace("/(tabs)/(home)");
   };
 
   const logout = async () => {
@@ -74,8 +78,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+// ✅ Named export for hook
 export const useAuth = () => {
-  const ctx = useContext(AuthContext);
-  if (!ctx) throw new Error("useAuth must be used inside AuthProvider");
-  return ctx;
+  const context = useContext(AuthContext);
+  if (!context) throw new Error("useAuth must be used within AuthProvider");
+  return context;
 };

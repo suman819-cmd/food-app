@@ -53,6 +53,7 @@ Join our community of developers creating universal apps.
 
 ```
 foodapp
+├─ .env
 ├─ app
 │  ├─ (auth)
 │  │  ├─ forgot-password.tsx
@@ -91,7 +92,9 @@ foodapp
 │  ├─ refer-earn.tsx
 │  ├─ search-results.tsx
 │  ├─ services
-│  │  └─ auth.service.ts
+│  │  ├─ api.ts
+│  │  ├─ auth.service.ts
+│  │  └─ auth.ts
 │  ├─ settings.tsx
 │  ├─ shipping-policy.tsx
 │  ├─ splash.tsx
@@ -100,8 +103,6 @@ foodapp
 │  ├─ terms-conditions.tsx
 │  ├─ tracking
 │  │  └─ [orderId].tsx
-│  ├─ utils
-│  │  └─ network.ts
 │  ├─ wallet.tsx
 │  └─ _layout.tsx
 ├─ app.json
@@ -117,6 +118,8 @@ foodapp
 │     └─ splash-icon.png
 ├─ constants
 │  └─ color.ts
+├─ context
+│  └─ AuthContext.tsx
 ├─ eslint.config.js
 ├─ hooks
 │  ├─ use-color-scheme.ts

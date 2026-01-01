@@ -4,7 +4,7 @@ import * as authService from "../app/services/auth";
 
 interface User {
   id: string;
-  name: string;
+  username: string;
   email: string;
 }
 
@@ -12,7 +12,7 @@ interface AuthContextType {
   user: User | null;
   login: (email: string, password: string) => Promise<void>;
   signup: (data: {
-    name: string;
+    username: string;
     email: string;
     password: string;
   }) => Promise<void>;
@@ -48,7 +48,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   };
 
   const signup = async (data: {
-    name: string;
+    username: string;
     email: string;
     password: string;
   }) => {
